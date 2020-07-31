@@ -5,6 +5,7 @@ import {CommonModule} from '@angular/common';
 import {RouterModule, Routes} from '@angular/router';
 import {FirstComponent} from './first/first.component';
 import { HomeComponent } from './home/home.component';
+import { IonicModule } from '@ionic/angular';
 
 const routes: Routes = [
   { path: '', component: FirstComponent },
@@ -15,9 +16,11 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     App1Component,
-    FirstComponent
+    FirstComponent,
+    HomeComponent
   ],
   imports: [
+    IonicModule.forRoot(),
     CommonModule,
     RouterModule.forChild(routes),
   ],

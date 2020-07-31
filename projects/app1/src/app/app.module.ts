@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { App1Component } from './app.component';
 import {RouterModule, Routes} from '@angular/router';
 import { FirstComponent } from './first/first.component';
+import { IonicModule } from '@ionic/angular';
 
 const routes: Routes = [
   { path: '', component: FirstComponent }
@@ -11,10 +12,10 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
-    App1Component,
-    FirstComponent
+    App1Component  
   ],
   imports: [
+    IonicModule.forRoot(),
     BrowserModule,
     RouterModule.forRoot(routes),
   ],
